@@ -1,11 +1,13 @@
 import { useState } from 'react'
 
+import DesignSystem from './pages/DesignSystem.jsx'
+
 function App() {
   const [count, setCount] = useState(1)
 
   return (
     <>
-     <h1>App Component {count}</h1>
+      <DesignSystem/>
     </>
   )
 }

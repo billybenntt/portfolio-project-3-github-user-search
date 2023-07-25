@@ -1,71 +1,81 @@
-@import url("https://fonts.googleapis.com/css?family=Karla:400|Spectral:400");
-
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap");
 /* RESET CLASSES */
 *, ::after, ::before {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 ul {
-    list-style: none;
-    padding: 0;
+  list-style: none;
+  padding: 0;
 }
 
 a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 h1, h2, h3, h4, h5, h6, p {
-    font-size: inherit;
-    font-weight: inherit;
-    margin: 0;
-}
-
-/* UTILITY CLASSES */
-.text-xs {
-    font-size: 0.6rem;
-}
-
-.text-sm {
-    font-size: 0.8rem;
-}
-
-.text-base {
-    font-size: 1rem;
-}
-
-.text-lg {
-    font-size: 1.5rem;
-}
-
-.text-xl {
-    font-size: 2rem;
+  font-size: inherit;
+  font-weight: inherit;
+  margin: 0;
 }
 
 /* GENERAL STYLES */
 body {
-    background-color: #a5f3fc;
-    font-family: "Consolas", monospace;
+  background-color: #FFFFFF;
+  font-family: "Space Mono", monospace;
 }
 
 /* COMPONENT CLASSES */
 .btn {
-    cursor: pointer;
+  cursor: pointer;
 }
-
 .btn:hover {
-    color: #06b6d4;
+  color: #697C9A;
+}
+.btn-primary {
+  background-color: #697C9A;
 }
 
-.btn-primary {
-    background-color: #06b6d4;
-    display: block;
+/* DESIGN SYSTEM STYLES */
+.design-system {
+  background-color: #FFFFFF;
+  padding: 5.938rem 10.313rem 10.75rem;
+  /* COLORS SECTION */
+}
+.design-system .design-system-center {
+  margin: 0 auto;
+  display: flex;
+  gap: 7rem 0;
+  flex-direction: column;
+  max-width: 1110px;
+}
+.design-system .header {
+  display: flex;
+  font-size: 1.625rem;
+  line-height: 2.375rem;
+  font-weight: bold;
+  justify-content: space-between;
+}
+.design-system .section {
+  border: 1px solid black;
+}
+.design-system .section-title {
+  font-size: 1.625rem;
+  line-height: 2.375rem;
+  font-weight: bold;
+  color: #2B3442;
+  margin-bottom: 2rem;
+}
+.design-system .section-title span {
+  color: #697C9A;
+  margin-right: 1rem;
 }
 
 /* MEDIA QUERIES  */
-@media screen and (min-width: 640px) {
-    .some-element {
-        background-color: red;
-    }
+@media screen and (min-width: 768px) {
+  .some-element {
+    background-color: red;
+  }
 }

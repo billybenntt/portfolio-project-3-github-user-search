@@ -1,37 +1,44 @@
-@import url('https://fonts.googleapis.com/css?family=Karla:400|Spectral:400');
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
 
 // VARIABLES
-$primary-100: #cffafe;
-$primary-200: #a5f3fc;
-$primary-300: #a5f3fc;
-$primary-400: #22d3ee;
-$primary-500: #06b6d4;
-$primary-600: #0891b2;
-$primary-700: #155e75;
-$primary-800: #155e75;
-$primary-900: #155e75;
-$accent-white: #fff;
-$accent-black: #222;
-$font-sans: 'Karla', sans-serif;
-$font-serif: 'Spectral', serif;
-$font-mono: 'Consolas', monospace;
-$max-w-md: 448px;
-$max-w-6xl: 1152px;
-$box-shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
-$box-shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+$primary-100: #697C9A;
+$primary-200: #4B6A9B;
+$primary-300: #0079FF;
+$accent-light-100: #FFFFFF;
+$accent-light-200: #F6F8FF;
+$accent-light-300: #FEFEFE;
+$accent-dark-100: #1E2A47;
+$accent-dark-200: #2B3442;
+$accent-dark-300: #141D2F;
+$font-sans: sans-serif;
+$font-serif: serif;
+$font-mono: 'Space Mono', monospace;
+$max-w-sm: 327px;
+$max-w-md: 573px;
+$max-w-lg: 730px;
+$max-w-xl: 1110px;
+$box-shadow-1: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+$box-shadow-2: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
 $transition: 0.3s ease-in-out all;
 $font-sizes: (
-        "xs": 0.6rem,
-        "sm": 0.8rem,
+        "xs": 0.813rem,
+        "sm": 0.938rem,
         "base": 1rem,
-        "lg": 1.5rem,
-        "xl": 2rem
+        "lg": 1.375rem,
+        "xl": 1.625rem
 );
+$line-height: (
+        "1": 1.25rem,
+        "2": 1.5rem,
+        "3": 1.563rem,
+        "4": 2.063rem,
+        "5": 2.375rem
+);
+
 $breakpoints: (
-        "sm": 640px,
+        "sm": 375px,
         "md": 768px,
-        "lg": 1.5rem,
-        "xl": 2rem
+        "lg": 1440px,
 );
 
 
@@ -59,7 +66,37 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 
-/* UTILITY CLASSES */
+// UTILITY MIXINS
+
+@mixin text-xs {
+  font-size: map-get($font-sizes, "xs");
+  line-height: map-get($line-height, "1");
+  font-weight: normal;
+}
+
+@mixin text-sm {
+  font-size: map-get($font-sizes, "sm");
+  line-height: map-get($line-height, "3");
+  font-weight: normal;
+}
+
+@mixin text-base {
+  font-size: map-get($font-sizes, "base");
+  line-height: map-get($line-height, "2");
+  font-weight: normal;
+}
+
+@mixin text-lg {
+  font-size: map-get($font-sizes, "lg");
+  line-height: map-get($line-height, "4");
+  font-weight: bold;
+}
+
+@mixin text-xl {
+  font-size: map-get($font-sizes, "xl");
+  line-height: map-get($line-height, "5");
+  font-weight: bold;
+}
 
 @mixin d-block {
   display: block;
@@ -89,24 +126,15 @@ h1, h2, h3, h4, h5, h6, p {
   border-radius: 15px;
 }
 
-
 @mixin rounded-full {
   border-radius: 100%;
-}
-
-
-// Typography Sizes
-@each $size, $value in $font-sizes {
-  .text-#{$size} {
-    font-size: $value;
-  }
 }
 
 
 /* GENERAL STYLES */
 
 body {
-  background-color: $primary-300;
+  background-color: $accent-light-100;
   font-family: $font-mono;
 }
 
@@ -117,21 +145,64 @@ body {
   cursor: pointer;
 
   &:hover {
-    color: $primary-500;
+    color: $primary-100;
   }
 
 
   &-primary {
-    background-color: $primary-500;
-    @include d-block;
+    background-color: $primary-100;
   }
+
+}
+
+/* DESIGN SYSTEM STYLES */
+
+
+.design-system {
+  background-color: $accent-light-100;
+  //padding: 95px 165px 172px;
+  padding: 5.938rem 10.313rem 10.75rem;
+
+
+  .design-system-center {
+    @include mx-auto;
+    @include d-flex;
+    gap: 7rem 0;
+    flex-direction: column;
+    max-width: $max-w-xl;
+  }
+
+  .header {
+    @include d-flex;
+    @include text-xl;
+    justify-content: space-between;
+  }
+
+  .section {
+    border: 1px solid black;
+  }
+
+
+  .section-title {
+    @include text-xl;
+    color: $accent-dark-200;
+    margin-bottom: 2rem;
+    span {
+      color: $primary-100;
+      margin-right: 1rem;
+    }
+  }
+
+  /* COLORS SECTION */
+
+
 
 }
 
 
 /* MEDIA QUERIES  */
 
-@media screen and (min-width: map-get($breakpoints, "sm")) {
+@media screen and (min-width: map-get($breakpoints, "md")) {
   .some-element {
     background-color: red;
   }
