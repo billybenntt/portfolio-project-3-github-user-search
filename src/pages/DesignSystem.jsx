@@ -1,8 +1,25 @@
+function Color (props) {
+  return (
+    <div className="color">
+      <div className="color-box">
+        <p>#0079FF</p>
+      </div>
+      <div className="color-description">
+        <h4>RGB</h4>
+        <p>0, 121, 255</p>
+      </div>
+      <div className="color-description">
+        <h4>HSL</h4>
+        <p>212°, 100%, 50%</p>
+      </div>
+    </div>
+  )
+}
+
 function DesignSystem () {
   return (
     <div className="design-system">
       <div className="design-system-center">
-
         {/* HEADER */}
         <header className="header">
           <h3>dev_Finder</h3>
@@ -20,24 +37,134 @@ function DesignSystem () {
 
             {/*GROUP 1*/}
             <div>
-              <h4>LIGHT MODE COLORS</h4>
-
+              <h4 className="colors-group-title">light mode colors</h4>
               <div className="colors-group">
                 <div className="color">
-                  <div></div>
-
-
+                  <div className="color-box">
+                    <p>#0079FF</p>
+                  </div>
+                  <div className="color-description">
+                    <h4>RGB</h4>
+                    <p>0, 121, 255</p>
+                  </div>
+                  <div className="color-description">
+                    <h4>HSL</h4>
+                    <p>212°, 100%, 50%</p>
+                  </div>
+                </div>
+                <div className="color">
+                  <div className="color-box">
+                    <p>#0079FF</p>
+                  </div>
+                  <div className="color-description">
+                    <h4>RGB</h4>
+                    <p>0, 121, 255</p>
+                  </div>
+                  <div className="color-description">
+                    <h4>HSL</h4>
+                    <p>212°, 100%, 50%</p>
+                  </div>
+                </div>
+                <div className="color">
+                  <div className="color-box">
+                    <p>#0079FF</p>
+                  </div>
+                  <div className="color-description">
+                    <h4>RGB</h4>
+                    <p>0, 121, 255</p>
+                  </div>
+                  <div className="color-description">
+                    <h4>HSL</h4>
+                    <p>212°, 100%, 50%</p>
+                  </div>
                 </div>
 
-
+                <div className="color">
+                  <div className="color-box">
+                    <p>#0079FF</p>
+                  </div>
+                  <div className="color-description">
+                    <h4>RGB</h4>
+                    <p>0, 121, 255</p>
+                  </div>
+                  <div className="color-description">
+                    <h4>HSL</h4>
+                    <p>212°, 100%, 50%</p>
+                  </div>
+                </div>
+                <div className="color">
+                  <div className="color-box">
+                    <p>#0079FF</p>
+                  </div>
+                  <div className="color-description">
+                    <h4>RGB</h4>
+                    <p>0, 121, 255</p>
+                  </div>
+                  <div className="color-description">
+                    <h4>HSL</h4>
+                    <p>212°, 100%, 50%</p>
+                  </div>
+                </div>
               </div>
             </div>
 
             {/*GROUP 2*/}
             <div>
-              <h4>DARK MODE COLORS</h4>
-
+              <h4 className="colors-group-title">Dark mode colors</h4>
               <div className="colors-group">
+                <div className="color">
+                  <div className="color-box">
+                    <p>#0079FF</p>
+                  </div>
+                  <div className="color-description">
+                    <h4>RGB</h4>
+                    <p>0, 121, 255</p>
+                  </div>
+                  <div className="color-description">
+                    <h4>HSL</h4>
+                    <p>212°, 100%, 50%</p>
+                  </div>
+                </div>
+                <div className="color">
+                  <div className="color-box">
+                    <p>#0079FF</p>
+                  </div>
+                  <div className="color-description">
+                    <h4>RGB</h4>
+                    <p>0, 121, 255</p>
+                  </div>
+                  <div className="color-description">
+                    <h4>HSL</h4>
+                    <p>212°, 100%, 50%</p>
+                  </div>
+                </div>
+                <div className="color">
+                  <div className="color-box">
+                    <p>#0079FF</p>
+                  </div>
+                  <div className="color-description">
+                    <h4>RGB</h4>
+                    <p>0, 121, 255</p>
+                  </div>
+                  <div className="color-description">
+                    <h4>HSL</h4>
+                    <p>212°, 100%, 50%</p>
+                  </div>
+                </div>
+                <div className="color">
+                  <div className="color-box">
+                    <p>#0079FF</p>
+                  </div>
+                  <div className="color-description">
+                    <h4>RGB</h4>
+                    <p>0, 121, 255</p>
+                  </div>
+                  <div className="color-description">
+                    <h4>HSL</h4>
+                    <p>212°, 100%, 50%</p>
+                  </div>
+                </div>
+
 
               </div>
             </div>
