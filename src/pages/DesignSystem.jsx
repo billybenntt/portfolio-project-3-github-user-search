@@ -1,7 +1,7 @@
 function Color (props) {
   return (
     <div className="color">
-      <div className="color-box">
+      <div className="color-box" style={{ backgroundColor: 'dodgerblue' }}>
         <p>#0079FF</p>
       </div>
       <div className="color-description">
@@ -39,72 +39,12 @@ function DesignSystem () {
             <div>
               <h4 className="colors-group-title">light mode colors</h4>
               <div className="colors-group">
-                <div className="color">
-                  <div className="color-box">
-                    <p>#0079FF</p>
-                  </div>
-                  <div className="color-description">
-                    <h4>RGB</h4>
-                    <p>0, 121, 255</p>
-                  </div>
-                  <div className="color-description">
-                    <h4>HSL</h4>
-                    <p>212°, 100%, 50%</p>
-                  </div>
-                </div>
-                <div className="color">
-                  <div className="color-box">
-                    <p>#0079FF</p>
-                  </div>
-                  <div className="color-description">
-                    <h4>RGB</h4>
-                    <p>0, 121, 255</p>
-                  </div>
-                  <div className="color-description">
-                    <h4>HSL</h4>
-                    <p>212°, 100%, 50%</p>
-                  </div>
-                </div>
-                <div className="color">
-                  <div className="color-box">
-                    <p>#0079FF</p>
-                  </div>
-                  <div className="color-description">
-                    <h4>RGB</h4>
-                    <p>0, 121, 255</p>
-                  </div>
-                  <div className="color-description">
-                    <h4>HSL</h4>
-                    <p>212°, 100%, 50%</p>
-                  </div>
-                </div>
+                <Color/>
+                <Color/>
+                <Color/>
+                <Color/>
+                <Color/>
 
-                <div className="color">
-                  <div className="color-box">
-                    <p>#0079FF</p>
-                  </div>
-                  <div className="color-description">
-                    <h4>RGB</h4>
-                    <p>0, 121, 255</p>
-                  </div>
-                  <div className="color-description">
-                    <h4>HSL</h4>
-                    <p>212°, 100%, 50%</p>
-                  </div>
-                </div>
-                <div className="color">
-                  <div className="color-box">
-                    <p>#0079FF</p>
-                  </div>
-                  <div className="color-description">
-                    <h4>RGB</h4>
-                    <p>0, 121, 255</p>
-                  </div>
-                  <div className="color-description">
-                    <h4>HSL</h4>
-                    <p>212°, 100%, 50%</p>
-                  </div>
-                </div>
               </div>
             </div>
 
@@ -112,67 +52,13 @@ function DesignSystem () {
             <div>
               <h4 className="colors-group-title">Dark mode colors</h4>
               <div className="colors-group">
-                <div className="color">
-                  <div className="color-box">
-                    <p>#0079FF</p>
-                  </div>
-                  <div className="color-description">
-                    <h4>RGB</h4>
-                    <p>0, 121, 255</p>
-                  </div>
-                  <div className="color-description">
-                    <h4>HSL</h4>
-                    <p>212°, 100%, 50%</p>
-                  </div>
-                </div>
-                <div className="color">
-                  <div className="color-box">
-                    <p>#0079FF</p>
-                  </div>
-                  <div className="color-description">
-                    <h4>RGB</h4>
-                    <p>0, 121, 255</p>
-                  </div>
-                  <div className="color-description">
-                    <h4>HSL</h4>
-                    <p>212°, 100%, 50%</p>
-                  </div>
-                </div>
-                <div className="color">
-                  <div className="color-box">
-                    <p>#0079FF</p>
-                  </div>
-                  <div className="color-description">
-                    <h4>RGB</h4>
-                    <p>0, 121, 255</p>
-                  </div>
-                  <div className="color-description">
-                    <h4>HSL</h4>
-                    <p>212°, 100%, 50%</p>
-                  </div>
-                </div>
-                <div className="color">
-                  <div className="color-box">
-                    <p>#0079FF</p>
-                  </div>
-                  <div className="color-description">
-                    <h4>RGB</h4>
-                    <p>0, 121, 255</p>
-                  </div>
-                  <div className="color-description">
-                    <h4>HSL</h4>
-                    <p>212°, 100%, 50%</p>
-                  </div>
-                </div>
-
-
+                <Color/>
+                <Color/>
+                <Color/>
+                <Color/>
               </div>
             </div>
-
-
           </div>
-
-
         </section>
 
 
