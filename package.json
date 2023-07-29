@@ -6,8 +6,8 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "scss:build": "sass src/styles/input.scss src/styles/output.css --no-source-map",
-    "scss:watch": "sass src/styles/input.scss src/styles/output.css --no-source-map --watch",
+    "scss:build": "sass src/styles/scss/input.scss src/styles/output.css --no-source-map",
+    "scss:watch": "sass src/styles/scss/input.scss src/styles/output.css --no-source-map --watch",
     "preview": "vite preview"
   },
   "dependencies": {

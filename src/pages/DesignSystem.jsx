@@ -1,4 +1,5 @@
 function Color (props) {
+
   return (
     <div className="color">
       <div className="color-box" style={{ backgroundColor: 'dodgerblue' }}>
@@ -34,7 +35,6 @@ function DesignSystem () {
 
 
           <div className="colors-center">
-
             {/*GROUP 1*/}
             <div>
               <h4 className="colors-group-title">light mode colors</h4>
@@ -60,7 +60,6 @@ function DesignSystem () {
             </div>
           </div>
         </section>
-
 
         {/* TYPOGRAPHY */}
         <section className="section typography">

@@ -1,0 +1,36 @@
+@import "variables";
+@import "utilities";
+
+
+/* GENERAL STYLES */
+
+
+body {
+  background-color: $accent-light-100;
+  font-family: $font-mono;
+}
+
+/* COMPONENT CLASSES */
+
+.btn {
+  cursor: pointer;
+
+  &:hover {
+    color: $primary-100;
+  }
+
+
+  &-primary {
+    background-color: $primary-100;
+  }
+
+}
+
+
+/* MEDIA QUERIES  */
+
+@media screen and (min-width: map-get($breakpoints, "md")) {
+  .some-element {
+    background-color: red;
+  }
+}

@@ -1,0 +1,64 @@
+// UTILITY MIXINS
+@import "variables";
+
+@mixin text-xs {
+  font-size: map-get($font-sizes, "xs");
+  line-height: map-get($line-height, "1");
+  font-weight: normal;
+}
+
+@mixin text-sm {
+  font-size: map-get($font-sizes, "sm");
+  line-height: map-get($line-height, "3");
+  font-weight: normal;
+}
+
+@mixin text-base {
+  font-size: map-get($font-sizes, "base");
+  line-height: map-get($line-height, "2");
+  font-weight: normal;
+}
+
+@mixin text-lg {
+  font-size: map-get($font-sizes, "lg");
+  line-height: map-get($line-height, "4");
+  font-weight: bold;
+}
+
+@mixin text-xl {
+  font-size: map-get($font-sizes, "xl");
+  line-height: map-get($line-height, "5");
+  font-weight: bold;
+}
+
+@mixin d-block {
+  display: block;
+}
+
+@mixin d-flex {
+  display: flex;
+}
+
+@mixin d-grid {
+  display: grid;
+}
+
+@mixin h-screen {
+  height: 100vh;
+}
+
+@mixin w-full {
+  width: 100%;
+}
+
+@mixin mx-auto {
+  margin: 0 auto;
+}
+
+@mixin rounded {
+  border-radius: 7px;
+}
+
+@mixin rounded-full {
+  border-radius: 100%;
+}
