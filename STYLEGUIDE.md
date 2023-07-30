@@ -1,6 +1,33 @@
 # Portfolio Project 3
 
+### Layout Map
+
+```scss
+project/
+├── src/
+│   ├── scss/
+│   │   ├── input.scss         // Main SCSS file that imports other SCSS files
+│   │   ├── _variables.scss     // SCSS variables
+│   │   ├── _normalize.scss         // CSS reset or normalize
+│   │   ├── _layout.scss        // main layout-related styles
+│   │   ├── _typography.scss    // Typography styles
+│   │   └── _design-system        // Other SCSS partials
+│   └── css/
+│       └── output.css          // Compiled CSS file
+└── index.html
+```
+
+
+
+
+
 ## Style Guide
+
+
+
+
+
+
 
 ## 1. Colors
 

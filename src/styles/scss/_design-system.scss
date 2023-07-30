@@ -10,7 +10,7 @@ body {
 
 .design-system {
   background-color: $accent-light-100;
-  padding: 5.938rem 10.313rem 10.75rem;
+
 }
 
 .design-system-center {
@@ -18,7 +18,7 @@ body {
   @include d-flex;
   gap: 7rem 0;
   flex-direction: column;
-  max-width: $max-w-xl;
+  max-width: $max-w-sm;
 }
 
 .header {
@@ -58,16 +58,13 @@ body {
 }
 
 .colors-group {
-  @include d-flex;
-  flex-wrap: wrap;
-  gap: 50px 0;
-  justify-content: space-between;
-
+  @include d-grid;
+  gap: 4rem 2rem;
+  grid-template-columns: repeat(auto-fill, minmax(252px, 1fr));
 }
 
-
 .color {
-  flex: 0 0 calc(25% - 2rem);
+  flex: 0 0 calc(25% - 1rem);
 }
 
 .color-box {
@@ -76,8 +73,9 @@ body {
   @include d-flex;
   padding: 55px 136px 21px 24px;
   align-items: flex-end;
-  color: $accent-light-100;
-  background-color: #0079FF;
+  color: #000;
+  background-color: #FFF;
+  border: 1px solid rgba(43, 52, 66, 0.11);
 }
 
 .color-description {
@@ -93,3 +91,77 @@ body {
     text-align: left;
   }
 }
+
+
+/* TYPOGRAPHY SECTION */
+
+.typography-title {
+  @include text-sm;
+  color: $primary-200;
+    margin-bottom: 0.5rem;
+}
+
+.typography-center {
+  display: flex;
+  flex-direction: column;
+
+}
+
+.typography-group {
+  flex: 0 0 calc(50% - 3rem);
+}
+
+
+
+.typography-item {
+
+  margin-bottom: 1rem;
+
+
+  h1 {
+    @include text-xl;
+  }
+
+  h2 {
+    @include text-lg;
+  }
+
+  h3 {
+    @include text-base;
+    color: $primary-300;
+  }
+
+  h4 {
+    @include text-sm;
+    color: $primary-200;
+  }
+
+  p {
+    @include text-xs;
+    color: $accent-dark-200;
+
+  }
+
+
+}
+
+
+@media screen and (min-width: map-get($breakpoints, "md")) {
+
+
+  .design-system {
+    padding: 6rem 10rem;
+  }
+
+  .design-system-center {
+    max-width: $max-w-xl;
+  }
+
+  .typography-center {
+    flex-direction: row;
+  }
+
+
+}
+
+
