@@ -10,7 +10,6 @@ body {
 
 .design-system {
   background-color: $accent-light-100;
-
 }
 
 .design-system-center {
@@ -24,7 +23,10 @@ body {
 .header {
   @include d-flex;
   @include text-xl;
-  justify-content: space-between;
+  margin-top: 1rem;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 
@@ -37,6 +39,7 @@ body {
 
 .section-title {
   @include text-xl;
+  text-align: center;
   color: $accent-dark-200;
   margin-bottom: 2rem;
 
@@ -68,9 +71,9 @@ body {
 }
 
 .color-box {
-  @include rounded;
   @include text-lg;
   @include d-flex;
+  border-radius: $rounded-md;
   padding: 55px 136px 21px 24px;
   align-items: flex-end;
   color: #000;
@@ -81,7 +84,7 @@ body {
 .color-description {
   @include d-flex;
   @include text-sm;
-  margin-top: 0.8rem;
+  margin-top: 0.4rem;
   gap: 0 4rem;
   color: $primary-200;
   text-align: left;
@@ -98,24 +101,23 @@ body {
 .typography-title {
   @include text-sm;
   color: $primary-200;
-    margin-bottom: 0.5rem;
+  margin-bottom: 0.5rem;
 }
 
 .typography-center {
-  display: flex;
-  justify-content: space-between;
-  flex-direction: column;
+  display: grid;
+  text-align: center;
+  grid-template-columns: 1fr;
 
 }
 
 .typography-group {
-  flex: 0 0 calc(50% -4rem);
+
+  border: 1px solid transparent;
 }
 
 
-
 .typography-item {
-
   margin-bottom: 1rem;
 
 
@@ -140,7 +142,6 @@ body {
   p {
     @include text-xs;
     color: $accent-dark-200;
-
   }
 
 
@@ -158,11 +159,119 @@ body {
     max-width: $max-w-xl;
   }
 
-  .typography-center {
+
+  .header {
+    @include text-xl;
+    margin-top: 0;
     flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+
+  .typography-center {
+    display: grid;
+    text-align: left;
+    gap: 1rem 2rem;
+    grid-template-columns: 40% 55%;
+
   }
 
 
 }
 
 
+.search-box {
+
+  max-width: 573px;
+
+  .search-box-center {
+    display: grid;
+    grid-template-columns: 10% 50% 20% 20%;
+    align-items: center;
+    padding: 0.8rem;
+    box-shadow: $box-shadow-1;
+    border-radius: $rounded-lg;
+    background-color: $accent-dark-100;
+    position: relative;
+  }
+
+  .search-icon {
+    width: 20px;
+    height: 20px;
+  }
+
+  .search-error {
+    @include text-xs;
+    @include mx-auto;
+    text-align: center;
+    font-weight: bold;
+    color: $secondary-100;
+    visibility: hidden;
+  }
+
+  .search-input {
+    @include text-xs;
+    border: none;
+    color: $accent-light-200;
+    background-color: transparent;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+
+  .search-btn {
+    @include text-xs;
+    @include transition-all;
+    padding: 0.7rem 0;
+    cursor: pointer;
+    text-align: center;
+    border-radius: $rounded-lg;
+    border: none;
+    background-color: $primary-300;
+    color: $accent-light-100;
+
+    &:hover {
+      background-color: $primary-400;
+    }
+
+    &:active {
+      background-color: $secondary-100;
+    }
+  }
+}
+
+
+@media screen and (min-width: map-get($breakpoints, "md")) {
+
+  .section-title {
+    text-align: left;
+  }
+
+
+  .search-box {
+
+    max-width: $max-w-md;
+
+    .search-error {
+      @include text-sm;
+      visibility: visible;
+    }
+
+    .search-input {
+      @include text-base;
+    }
+
+    .search-btn {
+      @include text-base;
+      padding: 0.75rem 1.5rem;
+
+    }
+
+
+  }
+
+
+}
