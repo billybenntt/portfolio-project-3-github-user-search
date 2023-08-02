@@ -502,6 +502,11 @@ body {
   color: #2B3442;
 }
 
+.interactive-center {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
 @media screen and (min-width: 768px) {
   .design-system {
     padding: 6rem 10rem;
@@ -525,6 +530,7 @@ body {
     grid-template-columns: 40% 55%;
   }
 }
+/* SEARCH BOX */
 .search-box {
   max-width: 573px;
 }
@@ -589,6 +595,11 @@ body {
   .section-title {
     text-align: left;
   }
+  .interactive-center {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: 1fr 1fr;
+  }
   .search-box {
     max-width: 573px;
   }
@@ -603,7 +614,7 @@ body {
     line-height: 1.5rem;
     font-weight: normal;
   }
-  .search-box .search-btn {
+  .search-box .search-input .search-btn {
     font-size: 1rem;
     line-height: 1.5rem;
     font-weight: normal;

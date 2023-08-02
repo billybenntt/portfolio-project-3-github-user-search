@@ -108,8 +108,9 @@ function DesignSystem () {
           <div className="section-title">
             <h3><span>3</span>Interactive Elements</h3>
           </div>
-          <div>
+          <div className="interactive-center">
 
+            <SearchBox/>
             <SearchBox/>
 
 

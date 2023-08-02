@@ -148,6 +148,13 @@ body {
 }
 
 
+.interactive-center {
+  @include d-grid;
+  grid-template-columns: 1fr;
+
+}
+
+
 @media screen and (min-width: map-get($breakpoints, "md")) {
 
 
@@ -180,6 +187,7 @@ body {
 
 }
 
+/* SEARCH BOX */
 
 .search-box {
 
@@ -250,6 +258,13 @@ body {
     text-align: left;
   }
 
+  .interactive-center {
+    @include d-grid;
+    gap: 1rem;
+    grid-template-columns: 1fr 1fr;
+
+  }
+
 
   .search-box {
 
@@ -262,16 +277,16 @@ body {
 
     .search-input {
       @include text-base;
-    }
 
-    .search-btn {
-      @include text-base;
-      padding: 0.75rem 1.5rem;
+      .search-btn {
+        @include text-base;
+        padding: 0.75rem 1.5rem;
+
+      }
+
 
     }
 
 
   }
-
-
 }
