@@ -1,6 +1,13 @@
 // UTILITY MIXINS
 @import "variables";
 
+@mixin text-xxs {
+  font-size: map-get($font-sizes, "xxs");
+  line-height: map-get($line-height, "1");
+  font-weight: normal;
+}
+
+
 @mixin text-xs {
   font-size: map-get($font-sizes, "xs");
   line-height: map-get($line-height, "1");

@@ -110,8 +110,18 @@ function DesignSystem () {
           </div>
           <div className="interactive-center">
 
-            <SearchBox/>
-            <SearchBox/>
+            <div className="search-item">
+              <SearchBox darkTheme={true}/>
+              <p className="item-description">Light Search Bar - Idle</p>
+            </div>
+            <div className="search-item">
+              <SearchBox/>
+              <p className="item-description">Light Search Bar - Active Search + Button Hover</p>
+            </div>
+            <div className="search-item">
+              <SearchBox/>
+              <p className="item-description">Light Search Bar - Error (No Results)</p>
+            </div>
 
 
           </div>

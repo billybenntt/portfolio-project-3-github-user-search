@@ -24,8 +24,10 @@ $rounded-lg: 10px;
 $rounded-xl: 16px;
 $box-shadow-1: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
 $box-shadow-2: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+$box-shadow-3: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
 $transition: 0.3s ease-in-out all;
 $font-sizes: (
+        "xxs": 0.625rem,
         "xs": 0.813rem,
         "sm": 0.938rem,
         "base": 1rem,

@@ -1,0 +1,96 @@
+@import "variables";
+@import "utilities";
+
+
+/* SEARCH BOX */
+
+.search-box {
+  max-width: 573px;
+  box-shadow: $box-shadow-1;
+  border-radius: $rounded-xl;
+  overflow: hidden;
+
+  .search-box-center {
+    display: grid;
+    grid-template-columns: 10% 45% 25% 20%;
+    align-items: center;
+    padding: 0.8rem;
+    background-color: $accent-light-100;
+    position: relative;
+  }
+
+  .search-icon {
+    width: 20px;
+    height: 20px;
+  }
+
+  .search-error {
+    @include text-xxs;
+    @include mx-auto;
+    text-align: center;
+    font-weight: bold;
+    color: $secondary-100;
+    visibility: hidden;
+  }
+
+  .search-error.active {
+    visibility: visible;
+  }
+
+  .search-input {
+    @include text-xxs;
+    border: none;
+    background-color: transparent;
+
+    &::placeholder {
+      color: $primary-200;
+    }
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  .search-btn {
+    @include text-xs;
+    @include transition-all;
+    padding: 0.7rem 0;
+    cursor: pointer;
+    text-align: center;
+    border-radius: $rounded-lg;
+    border: none;
+    background-color: $primary-300;
+    color: $accent-light-100;
+
+    &:hover {
+      background-color: $primary-400;
+    }
+
+    &:active {
+      background-color: $secondary-100;
+    }
+  }
+}
+
+
+@media screen and (min-width: map-get($breakpoints, "md")) {
+
+
+  .search-box {
+    max-width: $max-w-md;
+
+    .search-error {
+      @include text-xs;
+    }
+
+    .search-input {
+      @include text-sm;
+
+      .search-btn {
+        @include text-base;
+        padding: 0.75rem 1.5rem;
+
+      }
+    }
+  }
+}

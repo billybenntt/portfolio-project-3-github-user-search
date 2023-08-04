@@ -1,6 +1,14 @@
 import SearchIcon from '../assets/icon-search.svg'
 
-function SearchBox () {
+function SearchBox (props) {
+
+
+  const darktheme = {
+
+  }
+
+
+
   return (
     <form className="search-box">
       <div className="search-box-center">
@@ -9,7 +17,7 @@ function SearchBox () {
         <input type="text"
           placeholder="Search GitHub username…"
           className="search-input"/>
-        <div className="search-error">
+        <div className="search-error active">
           <p>No results</p>
         </div>
         <button className="search-btn" type="button">Search</button>

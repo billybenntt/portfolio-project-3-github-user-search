@@ -1,5 +1,6 @@
 @import "variables";
 @import "utilities";
+@import "components";
 
 // DESIGN SYSTEM STYLES
 
@@ -148,14 +149,39 @@ body {
 }
 
 
+/* INTERACTIVE ELEMENTS SECTION */
+
+
 .interactive-center {
   @include d-grid;
   grid-template-columns: 1fr;
+  gap: 2rem;
 
 }
 
 
+.item-description {
+  @include text-xxs;
+  text-align: center;
+  margin-top: 0.5rem;
+  color: $primary-200;
+}
+
+
+/* MEDIA QUERIES  */
+
+
 @media screen and (min-width: map-get($breakpoints, "md")) {
+
+  .search-item {
+    margin-bottom: 0;
+  }
+
+
+  .item-description {
+    @include text-sm;
+    margin-top: 1rem;
+  }
 
 
   .design-system {
@@ -184,109 +210,18 @@ body {
 
   }
 
-
-}
-
-/* SEARCH BOX */
-
-.search-box {
-
-  max-width: 573px;
-
-  .search-box-center {
-    display: grid;
-    grid-template-columns: 10% 50% 20% 20%;
-    align-items: center;
-    padding: 0.8rem;
-    box-shadow: $box-shadow-1;
-    border-radius: $rounded-lg;
-    background-color: $accent-dark-100;
-    position: relative;
-  }
-
-  .search-icon {
-    width: 20px;
-    height: 20px;
-  }
-
-  .search-error {
-    @include text-xs;
-    @include mx-auto;
-    text-align: center;
-    font-weight: bold;
-    color: $secondary-100;
-    visibility: hidden;
-  }
-
-  .search-input {
-    @include text-xs;
-    border: none;
-    color: $accent-light-200;
-    background-color: transparent;
-
-    &:focus {
-      outline: none;
-    }
-  }
-
-
-  .search-btn {
-    @include text-xs;
-    @include transition-all;
-    padding: 0.7rem 0;
-    cursor: pointer;
-    text-align: center;
-    border-radius: $rounded-lg;
-    border: none;
-    background-color: $primary-300;
-    color: $accent-light-100;
-
-    &:hover {
-      background-color: $primary-400;
-    }
-
-    &:active {
-      background-color: $secondary-100;
-    }
-  }
-}
-
-
-@media screen and (min-width: map-get($breakpoints, "md")) {
-
   .section-title {
     text-align: left;
   }
 
   .interactive-center {
     @include d-grid;
-    gap: 1rem;
+    gap: 2rem;
     grid-template-columns: 1fr 1fr;
 
   }
 
-
-  .search-box {
-
-    max-width: $max-w-md;
-
-    .search-error {
-      @include text-sm;
-      visibility: visible;
-    }
-
-    .search-input {
-      @include text-base;
-
-      .search-btn {
-        @include text-base;
-        padding: 0.75rem 1.5rem;
-
-      }
-
-
-    }
-
-
-  }
 }
+
+
+
