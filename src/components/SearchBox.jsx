@@ -3,10 +3,6 @@ import SearchIcon from '../assets/icon-search.svg'
 function SearchBox (props) {
 
 
-  const darktheme = {
-
-  }
-
 
 
   return (

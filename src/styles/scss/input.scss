@@ -4,3 +4,8 @@
 @import "layout";
 @import "design-system";
 
+body {
+  @include color-scheme($accent-light-100, $accent-dark-100)
+}
+
+

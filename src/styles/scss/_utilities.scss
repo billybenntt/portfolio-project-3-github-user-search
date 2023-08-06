@@ -68,3 +68,23 @@
   transition-duration: 500ms;
 }
 
+
+//  COLOR SCHEMES 
+
+@mixin color-scheme($color-1, $color-2) {
+  background-color: $color-1;
+  color: $color-2;
+
+  html.dark & {
+    background-color: $color-2;
+    color: $color-1;
+  }
+}
+
+
+@mixin color-scheme-text($color-1, $color-2) {
+  color: $color-2;
+  html.dark & {
+    color: $color-1;
+  }
+}

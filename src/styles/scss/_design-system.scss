@@ -4,13 +4,9 @@
 
 // DESIGN SYSTEM STYLES
 
-body {
-  background-color: $accent-light-100;
-  font-family: $font-mono;
-}
 
 .design-system {
-  background-color: $accent-light-100;
+  font-family: $font-mono;
 }
 
 .design-system-center {
@@ -41,7 +37,6 @@ body {
 .section-title {
   @include text-xl;
   text-align: center;
-  color: $accent-dark-200;
   margin-bottom: 2rem;
 
   span {
@@ -79,15 +74,15 @@ body {
   align-items: flex-end;
   color: #000;
   background-color: #FFF;
-  border: 1px solid rgba(43, 52, 66, 0.11);
+  border: 1px solid rgba(93, 128, 164, 0.53);
 }
 
 .color-description {
+  @include color-scheme-text($accent-light-400, $primary-200);
   @include d-flex;
   @include text-sm;
   margin-top: 0.4rem;
   gap: 0 4rem;
-  color: $primary-200;
   text-align: left;
 
   p {
@@ -132,18 +127,16 @@ body {
 
   h3 {
     @include text-base;
-    color: $primary-300;
   }
 
   h4 {
     @include text-sm;
-    color: $primary-200;
   }
 
   p {
     @include text-xs;
-    color: $accent-dark-200;
   }
+
 
 
 }
@@ -206,7 +199,7 @@ body {
     display: grid;
     text-align: left;
     gap: 1rem 2rem;
-    grid-template-columns: 40% 55%;
+    grid-template-columns: 50% 50%;
 
   }
 
