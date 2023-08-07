@@ -8,7 +8,7 @@ function DesignSystem () {
       <div className="design-system-center">
         {/* HEADER */}
         <header className="header">
-          <h3>dev_Finder</h3>
+          <h3>devFinder</h3>
           <h3>Design System</h3>
         </header>
 
@@ -82,9 +82,7 @@ function DesignSystem () {
                   mattis eros. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque
                   volutpat mattis eros. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio.
                   Quisque volutpat mattis eros. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-                  Donec
-                  odio. Quisque volutpat mattis eros.
-
+                  Donec odio. Quisque volutpat mattis eros.
                 </p>
                 <br/>
                 <p>
@@ -97,9 +95,7 @@ function DesignSystem () {
               </div>
 
             </div>
-
           </div>
-
 
         </section>
 
@@ -108,24 +104,37 @@ function DesignSystem () {
           <div className="section-title">
             <h3><span>3</span>Interactive Elements</h3>
           </div>
-          <div className="interactive-center">
 
-            <div className="search-item">
-              <SearchBox darkTheme={true}/>
-              <p className="item-description">Light Search Bar - Idle</p>
+
+          <div className="group">
+            <div className="interactive-center">
+              <div className="search-item">
+                <SearchBox/>
+                <p className="item-description">Light Search Bar - Idle</p>
+              </div>
+              <div className="search-item">
+                <SearchBox/>
+                <p className="item-description">Light Search Bar - Active Search + Button Hover</p>
+              </div>
+              <div className="search-item">
+                <SearchBox/>
+                <p className="item-description">Light Search Bar - Error (No Results)</p>
+              </div>
             </div>
-            <div className="search-item">
-              <SearchBox/>
-              <p className="item-description">Light Search Bar - Active Search + Button Hover</p>
-            </div>
-            <div className="search-item">
-              <SearchBox/>
-              <p className="item-description">Light Search Bar - Error (No Results)</p>
-            </div>
+          </div>
+
+
+          <div className="group">
+
+
 
 
           </div>
+
+
         </section>
+
+
       </div>
     </div>
   )

@@ -69,12 +69,12 @@
 .color-box {
   @include text-lg;
   @include d-flex;
+  @include color-scheme-border($accent-light-100, $primary-100);
   border-radius: $rounded-md;
   padding: 55px 136px 21px 24px;
   align-items: flex-end;
   color: #000;
   background-color: #FFF;
-  border: 1px solid rgba(93, 128, 164, 0.53);
 }
 
 .color-description {

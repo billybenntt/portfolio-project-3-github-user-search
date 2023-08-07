@@ -3,8 +3,6 @@ import SearchIcon from '../assets/icon-search.svg'
 function SearchBox (props) {
 
 
-
-
   return (
     <form className="search-box">
       <div className="search-box-center">

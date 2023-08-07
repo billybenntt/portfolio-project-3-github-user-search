@@ -4,33 +4,66 @@
 
 /* GENERAL STYLES */
 
-
 body {
-  background-color: $accent-light-100;
   font-family: $font-mono;
 }
 
-/* COMPONENT CLASSES */
 
-.btn {
-  cursor: pointer;
-
-  &:hover {
-    color: $primary-100;
-  }
+.search {
+  @include mx-auto;
+  max-width: $max-w-sm;
+  margin-top: 31px;
+}
 
 
-  &-primary {
-    background-color: $primary-100;
-  }
+.header-title {
+  @include text-lg;
+}
 
+
+.search-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.search-toggle {
+  font-size: 13px;
+  letter-spacing: 0.2rem;
+  text-transform: uppercase;
+  align-items: center;
+  display: flex;
+}
+
+.search-result {
+  width: 100%;
+  height: 444px;
+  margin-top: 1rem;
+
+  @include color-scheme($accent-light-100, $accent-dark-100);
+
+  box-shadow: $box-shadow-1;
+  border-radius: $rounded-xl;
 }
 
 
 /* MEDIA QUERIES  */
 
 @media screen and (min-width: map-get($breakpoints, "md")) {
-  .some-element {
-    background-color: red;
+
+  .search {
+    max-width: $max-w-md;
   }
+
+
+}
+
+
+@media screen and (min-width: map-get($breakpoints, "lg")) {
+
+  .search {
+    max-width: $max-w-lg;
+  }
+
+
 }

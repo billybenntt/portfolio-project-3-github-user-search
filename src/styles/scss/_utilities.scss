@@ -88,3 +88,18 @@
     color: $color-1;
   }
 }
+
+
+@mixin color-scheme-border($color-1, $color-2) {
+  border: 1px solid $color-2;
+  html.dark & {
+    border: 1px solid $color-1;
+  }
+}
+
+@mixin color-scheme-icon($color-1, $color-2) {
+  border: 1px solid $color-2;
+  html.dark & {
+    border: 1px solid $color-1;
+  }
+}

@@ -1,13 +1,13 @@
 import { useState } from 'react'
-
 import DesignSystem from './pages/DesignSystem.jsx'
+import Search from './pages/Search.jsx'
 
-function App() {
+function App () {
   const [count, setCount] = useState(1)
 
   return (
     <>
-      <DesignSystem/>
+      <Search/>
     </>
   )
 }

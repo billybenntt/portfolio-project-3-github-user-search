@@ -2,8 +2,7 @@
 @import "utilities";
 
 
-/* SEARCH BOX */
-
+// SEARCH BOX
 .search-box {
   max-width: 573px;
   box-shadow: $box-shadow-1;
@@ -11,8 +10,7 @@
   overflow: hidden;
 
   .search-box-center {
-    @include color-scheme($accent-light-100, $accent-dark-300);
-
+    @include color-scheme($accent-light-100, $accent-dark-100);
     display: grid;
     grid-template-columns: 10% 45% 25% 20%;
     align-items: center;
@@ -44,8 +42,9 @@
     border: none;
     background-color: transparent;
 
+
     &::placeholder {
-      color: $primary-200;
+      @include color-scheme-text($accent-light-100, $primary-200);
     }
 
     &:focus {
@@ -74,9 +73,18 @@
   }
 }
 
+// DARK ICON
+
+
+.toggle-icon {
+  height: 20px;
+  width: 20px;
+  background: url("src/assets/icon-moon.svg") no-repeat;
+  margin-left: 1rem;
+}
+
 
 @media screen and (min-width: map-get($breakpoints, "md")) {
-
 
   .search-box {
     max-width: $max-w-md;
@@ -95,4 +103,20 @@
       }
     }
   }
+}
+
+
+@media screen and (min-width: map-get($breakpoints, "lg")) {
+
+
+  .search-box {
+    max-width: $max-w-lg;
+  }
+
+
+  .search-input {
+    @include text-sm;
+  }
+
+
 }
