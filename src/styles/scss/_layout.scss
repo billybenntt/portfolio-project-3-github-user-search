@@ -15,10 +15,7 @@ body {
   margin-top: 31px;
 }
 
-
-.header-title {
-  @include text-lg;
-}
+// SEARCH HEADER
 
 
 .search-header {
@@ -27,23 +24,83 @@ body {
   margin-bottom: 1rem;
 }
 
-.search-toggle {
-  font-size: 13px;
+.header-title {
+  @include text-lg;
+}
+
+
+.header-toggle {
+  @include text-xs;
   letter-spacing: 0.2rem;
+  font-weight: bold;
   text-transform: uppercase;
   align-items: center;
+  gap: 0.5rem;
   display: flex;
 }
 
+.toggle-icon {
+  width: 15px;
+}
+
+
+// SEARCH RESULT
+
 .search-result {
+  @include color-scheme($accent-light-100, $accent-dark-100);
   width: 100%;
   height: 444px;
   margin-top: 1rem;
-
-  @include color-scheme($accent-light-100, $accent-dark-100);
-
   box-shadow: $box-shadow-1;
   border-radius: $rounded-xl;
+}
+
+
+.search-result-center {
+  padding: 24px;
+  @include d-flex;
+  flex-direction: column;
+  gap: 0.8rem 0;
+}
+
+
+.user-profile-header {
+  @include d-flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+
+.user-profile-img {
+  border-radius: $rounded-full;
+  width: 4.375rem;
+  height: 4.375rem;
+}
+
+
+.user-profile-bio {
+  @include text-xs;
+}
+
+.user-profile-stats {
+  @include color-scheme($accent-light-200, $accent-dark-300);
+  @include d-flex;
+  justify-content: space-between;
+  text-align: center;
+  gap: 1rem;
+  border-radius: $rounded-lg;
+  padding: 1rem;
+}
+
+.user-stat {
+  @include color-scheme-text($accent-light-100, $primary-200)
+}
+
+
+.user-profile-links img {
+  width: 10px;
+  display: inline;
 }
 
 

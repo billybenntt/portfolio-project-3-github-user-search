@@ -76,14 +76,6 @@
 // DARK ICON
 
 
-.toggle-icon {
-  height: 20px;
-  width: 20px;
-  background: url("src/assets/icon-moon.svg") no-repeat;
-  margin-left: 1rem;
-}
-
-
 @media screen and (min-width: map-get($breakpoints, "md")) {
 
   .search-box {
@@ -115,7 +107,9 @@
 
 
   .search-input {
-    @include text-sm;
+    &::placeholder {
+      @include text-base;
+    }
   }
 
 
