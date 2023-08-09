@@ -357,13 +357,13 @@ body {
   margin-bottom: 1rem;
 }
 
-.header-title {
+.search-header__title {
   font-size: 1.375rem;
   line-height: 2.063rem;
   font-weight: bold;
 }
 
-.header-toggle {
+.search-header__toggle {
   font-size: 0.813rem;
   line-height: 1.25rem;
   font-weight: normal;
@@ -375,7 +375,7 @@ body {
   display: flex;
 }
 
-.toggle-icon {
+.search-header__toggle-icon {
   width: 15px;
 }
 
@@ -393,18 +393,37 @@ html.dark .search-result {
   color: #FFFFFF;
 }
 
-.search-result-center {
+.search-result__center {
   padding: 24px;
   display: flex;
   flex-direction: column;
   gap: 0.8rem 0;
 }
 
-.user-profile-header {
+.search-result__header {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   margin-bottom: 1rem;
+}
+
+.search-result__header-info h3 {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-weight: normal;
+  font-weight: bold;
+}
+.search-result__header-info h4 {
+  font-size: 0.938rem;
+  line-height: 1.563rem;
+  font-weight: normal;
+  color: #0079FF;
+}
+.search-result__header-info p {
+  font-size: 0.938rem;
+  line-height: 1.563rem;
+  font-weight: normal;
+  color: #697C9A;
 }
 
 .user-profile-img {
@@ -413,37 +432,45 @@ html.dark .search-result {
   height: 4.375rem;
 }
 
-.user-profile-bio {
+.search-result__bio {
   font-size: 0.813rem;
   line-height: 1.25rem;
   font-weight: normal;
+  color: #4B6A9B;
+  line-height: 1.563rem;
 }
 
-.user-profile-stats {
+.search-result__stats {
+  display: flex;
   background-color: #F6F8FF;
   color: #141D2F;
-  display: flex;
-  justify-content: space-between;
-  text-align: center;
-  gap: 1rem;
   border-radius: 10px;
-  padding: 1rem;
+  justify-content: space-evenly;
+  text-align: center;
+  padding: 1.125rem 0.938rem;
 }
-html.dark .user-profile-stats {
+html.dark .search-result__stats {
   background-color: #141D2F;
   color: #F6F8FF;
 }
 
-.user-stat {
+.search-result__stats-item h4 {
   color: #4B6A9B;
+  margin-bottom: 0.3rem;
+  font-size: 0.688rem;
 }
-html.dark .user-stat {
+html.dark .search-result__stats-item h4 {
   color: #FFFFFF;
 }
-
-.user-profile-links img {
-  width: 10px;
-  display: inline;
+.search-result__stats-item p {
+  color: #1E2A47;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-weight: normal;
+  font-weight: bold;
+}
+html.dark .search-result__stats-item p {
+  color: #FFFFFF;
 }
 
 /* MEDIA QUERIES  */
@@ -457,6 +484,13 @@ html.dark .user-stat {
     max-width: 730px;
   }
 }
+.custom-icon {
+  fill: #697C9A;
+}
+html.dark .custom-icon {
+  fill: #FFFFFF;
+}
+
 .search-box {
   max-width: 573px;
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);

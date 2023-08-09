@@ -97,3 +97,11 @@
   }
 }
 
+
+@mixin color-scheme-fill($color-1, $color-2) {
+  fill: $color-2;
+  html.dark & {
+    fill: $color-1;
+  }
+}
+

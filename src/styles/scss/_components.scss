@@ -2,6 +2,13 @@
 @import "utilities";
 
 
+// CUSTOM ICON
+
+.custom-icon {
+  @include color-scheme-fill($accent-light-100, $primary-100)
+}
+
+
 // SEARCH BOX
 .search-box {
   max-width: 573px;
