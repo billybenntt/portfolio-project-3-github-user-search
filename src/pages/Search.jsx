@@ -1,11 +1,11 @@
+import { CiLocation, CiCompany, CiWebsite, CiTwitter } from '../components/icons'
 import SearchBox from '../components/SearchBox.jsx'
 import MoonIcon from '/src/assets/icon-moon.svg'
 import SunIcon from '/src/assets/icon-sun.svg'
 import userImage from '/src/assets/profile-img.png'
-import CiLocation from '../components/icons/CiLocation.jsx'
-import CiCompany from '../components/icons/CiCompany.jsx'
-import CiTwitter from '../components/icons/CiTwitter.jsx'
-import CiWebsite from '../components/icons/CiWebsite.jsx'
+
+
+
 
 function Search () {
   return (
@@ -30,16 +30,17 @@ function Search () {
       <div className="search-result">
         <div className="search-result__center">
 
-          {/* SEARCH HEADER  */}
-          <div className="search-result__header">
-            <div className="">
-              <img src={userImage} alt="" className="user-profile-img"/>
-            </div>
-            <div className="search-result__header-info">
-              <h3>The Octocat</h3>
-              <h4>@octocat</h4>
-              <p>Joined 25 Jan 2011</p>
-            </div>
+          {/* SEARCH IMG  */}
+          <div className="search-result__img">
+            <img src={userImage} alt=""/>
+          </div>
+
+          {/* SEARCH INFO  */}
+
+          <div className="search-result__info">
+            <h3>The Octocat</h3>
+            <h4>@octocat</h4>
+            <p>Joined 25 Jan 2011</p>
           </div>
 
           {/* SEARCH BIO */}
@@ -68,17 +69,26 @@ function Search () {
 
           {/*LINKS */}
           <div className="search-result__links">
-            <div className="search-result__links-item">
-              <CiLocation/>
+            <div className="search-result__links-group">
+              <div className="search-result__links-item">
+                <CiLocation/>
+                <a href="">San Francisco</a>
+              </div>
+              <div className="search-result__links-item">
+                <CiCompany/>
+                <a href="">https://github.blog</a>
+              </div>
             </div>
-            <div className="search-result__links-item">
-              <CiCompany/>
-            </div>
-            <div className="search-result__links-item">
-              <CiTwitter/>
-            </div>
-            <div className="search-result__links-item">
-              <CiWebsite/>
+
+            <div className="search-result__links-group">
+              <div className="search-result__links-item">
+                <CiTwitter/>
+                <a href="">Not Available</a>
+              </div>
+              <div className="search-result__links-item">
+                <CiWebsite/>
+                <a href="">@github</a>
+              </div>
             </div>
           </div>
         </div>
