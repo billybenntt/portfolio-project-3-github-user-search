@@ -4,7 +4,7 @@ function CiSearch () {
 
   return (
     <span className="custom-icon">
-      <svg height="24" width="25"
+      <svg height="25" width="25"
         xmlns="http://www.w3.org/2000/svg">
         <path d="M10.609 0c5.85 0 10.608 4.746
         10.608 10.58 0 2.609-.952 5-2.527 6.847l5.112
