@@ -4,21 +4,23 @@
 
 /* GENERAL STYLES */
 
-#root {
+
+body {
+  font-family: $font-mono;
+}
+
+.custom-icon {
+  @include color-scheme-fill($accent-light-100, $primary-100);
+}
+
+.root {
   height: 100vh;
   display: grid;
   justify-content: center;
   align-content: center;
 }
 
-body {
-  font-family: $font-mono;
 
-}
-
-.custom-icon {
-  @include color-scheme-fill($accent-light-100, $primary-100);
-}
 
 .search {
   max-width: $max-w-sm;
