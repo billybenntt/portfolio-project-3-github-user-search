@@ -9,8 +9,6 @@ const getLocalStorage = () => {
 function Search () {
   const [theme, setTheme] = useState(() => getLocalStorage())
 
-  console.log(theme)
-
   // EFFECT - SET THEME
   useEffect(() => {
     /*Get HTML Element and assign Default class */
@@ -30,92 +28,93 @@ function Search () {
   return (
     <div className="search">
 
-      {/*SEARCH HEADER TOGGLE */}
-      <div className="search-header">
-        <h3 className="search-header__title">devFinder</h3>
-        <div className="search-header__toggle" onClick={toggleTheme}>
-          <h3> {theme === 'dark' ? "light" : "dark"}</h3>
-          <div className="search-header__toggle-icon">
-            {theme === 'dark' ? <CiSun/> : <CiMoon/>}
+      <div className="search-center">
+        {/*SEARCH HEADER TOGGLE */}
+        <div className="search-header">
+          <h3 className="search-header__title">devFinder</h3>
+          <div className="search-header__toggle" onClick={toggleTheme}>
+            <h3> {theme === 'dark' ? 'light' : 'dark'}</h3>
+            <div className="search-header__toggle-icon">
+              {theme === 'dark' ? <CiSun/> : <CiMoon/>}
+            </div>
           </div>
         </div>
-      </div>
 
-      {/*SEARCH BOX */}
-      <form className="search-box">
-        <div className="search-box__center">
-          <div className="search-box__icon">
-            <CiSearch/>
+        {/*SEARCH BOX */}
+        <form className="search-box">
+          <div className="search-box__center">
+            <div className="search-box__icon">
+              <CiSearch/>
+            </div>
+            <input type="text"
+              placeholder="Search GitHub username…"
+              className="search-box__input"/>
+            <button className="search-box__btn" type="button">
+              Search
+            </button>
           </div>
-          <input type="text"
-            placeholder="Search GitHub username…"
-            className="search-box__input"/>
-          <button className="search-box__btn" type="button">
-            Search
-          </button>
-        </div>
-      </form>
+        </form>
 
-      {/*SEARCH RESULTS */}
-      <div className="search-result">
-        <div className="search-result__center">
-          {/* SEARCH IMG  */}
-          <div className="search-result__img">
-            <img src={userImage} alt=""/>
-          </div>
-          {/* SEARCH INFO  */}
-
-          <div className="search-result__info">
-            <div>
-              <h3>The Octocat</h3>
-              <h4>@octocat</h4>
+        {/*SEARCH RESULTS */}
+        <div className="search-result">
+          <div className="search-result__center">
+            {/* SEARCH IMG  */}
+            <div className="search-result__img">
+              <img src={userImage} alt=""/>
             </div>
-            <div>
-              <p>Joined 25 Jan 2011</p>
-            </div>
-          </div>
-          {/* SEARCH BIO */}
-          <div className="search-result__bio">
-            <p>
-              Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis
-              eros.
-            </p>
-          </div>
-          {/* STATS */}
-          <div className="search-result__stats">
-            <div className="search-result__stats-item">
-              <h4>Repos</h4>
-              <p>8</p>
-            </div>
-            <div className="search-result__stats-item">
-              <h4>Followers</h4>
-              <p>3938</p>
-            </div>
-            <div className="search-result__stats-item">
-              <h4>Following</h4>
-              <p>9</p>
-            </div>
-          </div>
-          {/*LINKS */}
-          <div className="search-result__links">
-            <div className="search-result__links-group">
-              <div className="search-result__links-item">
-                <CiLocation/>
-                <a href="">San Francisco</a>
+            {/* SEARCH INFO  */}
+            <div className="search-result__info">
+              <div>
+                <h3>The Octocat</h3>
+                <h4>@octocat</h4>
               </div>
-              <div className="search-result__links-item">
-                <CiCompany/>
-                <a href="">https://github.blog</a>
+              <div>
+                <p>Joined 25 Jan 2011</p>
               </div>
             </div>
-            <div className="search-result__links-group">
-              <div className="search-result__links-item">
-                <CiTwitter/>
-                <a href="">Not Available</a>
+            {/* SEARCH BIO */}
+            <div className="search-result__bio">
+              <p>
+                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis
+                eros.
+              </p>
+            </div>
+            {/* STATS */}
+            <div className="search-result__stats">
+              <div className="search-result__stats-item">
+                <h4>Repos</h4>
+                <p>8</p>
               </div>
-              <div className="search-result__links-item">
-                <CiWebsite/>
-                <a href="">@github</a>
+              <div className="search-result__stats-item">
+                <h4>Followers</h4>
+                <p>3938</p>
+              </div>
+              <div className="search-result__stats-item">
+                <h4>Following</h4>
+                <p>9</p>
+              </div>
+            </div>
+            {/*LINKS */}
+            <div className="search-result__links">
+              <div className="search-result__links-group">
+                <div className="search-result__links-item">
+                  <CiLocation/>
+                  <a href="">San Francisco</a>
+                </div>
+                <div className="search-result__links-item">
+                  <CiCompany/>
+                  <a href="">https://github.blog</a>
+                </div>
+              </div>
+              <div className="search-result__links-group">
+                <div className="search-result__links-item">
+                  <CiTwitter/>
+                  <a href="">Not Available</a>
+                </div>
+                <div className="search-result__links-item">
+                  <CiWebsite/>
+                  <a href="">@github</a>
+                </div>
               </div>
             </div>
           </div>

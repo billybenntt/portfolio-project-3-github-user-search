@@ -4,7 +4,7 @@ function CiSun () {
   return (
     <span className="custom-icon">
       <svg width="20" height="20" xmlns="http://www.w3.org/2000/svg">
-       <g fill="#FFF">
+       <g >
         <path d="M13.545
           6.455c-.9-.9-2.17-1.481-3.545-1.481a4.934 4.934
           0 00-3.545 1.481c-.9.9-1.481 2.17-1.481

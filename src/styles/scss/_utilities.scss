@@ -69,6 +69,14 @@
 }
 
 
+@mixin transition-all-2 {
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 800ms;
+}
+
+
+
 //  COLOR SCHEMES 
 
 @mixin color-scheme($color-1, $color-2) {
