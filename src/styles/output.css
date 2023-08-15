@@ -406,9 +406,6 @@ html.dark .search-header__toggle:hover h3 {
   color: #4B6A9B;
 }
 .search-header__toggle:hover .custom-icon {
-  transition-property: all;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 800ms;
   fill: #1E2A47;
 }
 html.dark .search-header__toggle:hover .custom-icon {
@@ -418,7 +415,7 @@ html.dark .search-header__toggle:hover .custom-icon {
   transition-property: all;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 800ms;
-  transform: rotate(120deg);
+  transform: rotate(360deg);
 }
 
 .search-box {

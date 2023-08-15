@@ -21,7 +21,6 @@ body {
 }
 
 
-
 .search {
   max-width: $max-w-sm;
 }
@@ -62,13 +61,12 @@ body {
   }
 
   .custom-icon {
-    @include transition-all-2;
     @include color-scheme-fill($primary-200, $accent-dark-100);
   }
 
   svg {
     @include transition-all-2;
-    transform: rotate(120deg);
+    transform: rotate(360deg);
   }
 
 }
