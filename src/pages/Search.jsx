@@ -2,12 +2,19 @@ import { useState, useEffect } from 'react'
 import { CiLocation, CiCompany, CiWebsite, CiTwitter, CiSearch, CiMoon, CiSun } from '../components/icons'
 import userImage from '/src/assets/profile-img.png'
 
+import { useGlobalContext } from '../hooks/context.jsx'
+
 const getLocalStorage = () => {
   return localStorage.getItem('theme') || 'light'
 }
 
 function Search () {
   const [theme, setTheme] = useState(() => getLocalStorage())
+
+  const { isLoading } = useGlobalContext()
+
+  console.log(isLoading)
+
 
   // EFFECT - SET THEME
   useEffect(() => {
