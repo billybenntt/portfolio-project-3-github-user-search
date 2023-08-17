@@ -10,10 +10,8 @@ const getLocalStorage = () => {
 
 function Search () {
   const [theme, setTheme] = useState(() => getLocalStorage())
-
-  const { isLoading } = useGlobalContext()
-
-  console.log(isLoading)
+  const { fetchUserData, user } = useGlobalContext()
+  const { name, login, public_repos, followers, following , avatar_url, location, twitter_username} = user
 
 
   // EFFECT - SET THEME
@@ -56,7 +54,7 @@ function Search () {
             <input type="text"
               placeholder="Search GitHub username…"
               className="search-box__input"/>
-            <button className="search-box__btn" type="button">
+            <button className="search-box__btn" type="button" onClick={fetchUserData}>
               Search
             </button>
           </div>
@@ -67,13 +65,13 @@ function Search () {
           <div className="search-result__center">
             {/* SEARCH IMG  */}
             <div className="search-result__img">
-              <img src={userImage} alt=""/>
+              <img src={avatar_url} alt=""/>
             </div>
             {/* SEARCH INFO  */}
             <div className="search-result__info">
               <div>
-                <h3>The Octocat</h3>
-                <h4>@octocat</h4>
+                <h3>{name}</h3>
+                <h4>@{login}</h4>
               </div>
               <div>
                 <p>Joined 25 Jan 2011</p>
@@ -90,15 +88,15 @@ function Search () {
             <div className="search-result__stats">
               <div className="search-result__stats-item">
                 <h4>Repos</h4>
-                <p>8</p>
+                <p>{public_repos}</p>
               </div>
               <div className="search-result__stats-item">
                 <h4>Followers</h4>
-                <p>3938</p>
+                <p>{followers}</p>
               </div>
               <div className="search-result__stats-item">
                 <h4>Following</h4>
-                <p>9</p>
+                <p>{following}</p>
               </div>
             </div>
             {/*LINKS */}
@@ -106,7 +104,7 @@ function Search () {
               <div className="search-result__links-group">
                 <div className="search-result__links-item">
                   <CiLocation/>
-                  <a href="">San Francisco</a>
+                  <a href="">{location}</a>
                 </div>
                 <div className="search-result__links-item">
                   <CiCompany/>
@@ -116,7 +114,7 @@ function Search () {
               <div className="search-result__links-group">
                 <div className="search-result__links-item">
                   <CiTwitter/>
-                  <a href="">Not Available</a>
+                  <a href="">{twitter_username}NA</a>
                 </div>
                 <div className="search-result__links-item">
                   <CiWebsite/>
