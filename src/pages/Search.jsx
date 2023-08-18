@@ -1,38 +1,27 @@
-import { useState, useEffect } from 'react'
 import { CiLocation, CiCompany, CiWebsite, CiTwitter, CiSearch, CiMoon, CiSun } from '../components/icons'
-import userImage from '/src/assets/profile-img.png'
-
 import { useGlobalContext } from '../hooks/context.jsx'
-
-const getLocalStorage = () => {
-  return localStorage.getItem('theme') || 'light'
-}
+import moment from 'moment'
+import { useState } from 'react'
 
 function Search () {
-  const [theme, setTheme] = useState(() => getLocalStorage())
-  const { fetchUserData, user } = useGlobalContext()
-  const { name, login, public_repos, followers, following , avatar_url, location, twitter_username} = user
 
+  const { fetchUserData, user, toggleTheme, theme } = useGlobalContext()
+  const {
+    name, login, bio, blog, created_at, public_repos,
+    company, followers, following, avatar_url, location,
+    twitter_username
+  } = user
+  const [search, setSearch] = useState('')
 
-  // EFFECT - SET THEME
-  useEffect(() => {
-    /*Get HTML Element and assign Default class */
-    document.documentElement.className = theme
-    localStorage.setItem('theme', theme)
-  }, [theme])
+  const formatDate = moment(created_at).format('MMM Do, YYYY')
 
-  // EVENT HANDLER TOGGLE THEME
-  function toggleTheme () {
-    if (theme === 'light') {
-      setTheme('dark')
-    } else {
-      setTheme('light')
-    }
+  const handleSubmit = (e) => {
+    e.preventDefault()
+    fetchUserData(search)
   }
 
   return (
     <div className="search">
-
       <div className="search-center">
         {/*SEARCH HEADER TOGGLE */}
         <div className="search-header">
@@ -46,15 +35,15 @@ function Search () {
         </div>
 
         {/*SEARCH BOX */}
-        <form className="search-box">
+        <form className="search-box" onSubmit={handleSubmit}>
           <div className="search-box__center">
             <div className="search-box__icon">
               <CiSearch/>
             </div>
-            <input type="text"
+            <input type="text" onChange={(e) => setSearch(e.target.value)}
               placeholder="Search GitHub username…"
               className="search-box__input"/>
-            <button className="search-box__btn" type="button" onClick={fetchUserData}>
+            <button className="search-box__btn" type="submit">
               Search
             </button>
           </div>
@@ -74,14 +63,13 @@ function Search () {
                 <h4>@{login}</h4>
               </div>
               <div>
-                <p>Joined 25 Jan 2011</p>
+                <p>Joined {formatDate}</p>
               </div>
             </div>
             {/* SEARCH BIO */}
             <div className="search-result__bio">
               <p>
-                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis
-                eros.
+                {bio}
               </p>
             </div>
             {/* STATS */}
@@ -104,21 +92,21 @@ function Search () {
               <div className="search-result__links-group">
                 <div className="search-result__links-item">
                   <CiLocation/>
-                  <a href="">{location}</a>
+                  <a href="">{location ? location : 'Not Available'}</a>
                 </div>
                 <div className="search-result__links-item">
                   <CiCompany/>
-                  <a href="">https://github.blog</a>
+                  <a href="">{company ? company : 'Not Available'}</a>
                 </div>
               </div>
               <div className="search-result__links-group">
                 <div className="search-result__links-item">
                   <CiTwitter/>
-                  <a href="">{twitter_username}NA</a>
+                  <a href="">{twitter_username ? twitter_username : 'Not Available'}</a>
                 </div>
                 <div className="search-result__links-item">
                   <CiWebsite/>
-                  <a href="">@github</a>
+                  <a href="">{blog ? blog : 'Not Available'}</a>
                 </div>
               </div>
             </div>

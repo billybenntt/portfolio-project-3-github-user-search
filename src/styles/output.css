@@ -550,6 +550,7 @@ html.dark .search-result {
 
 .search-result__bio {
   grid-area: c;
+  min-height: 2rem;
   color: #4B6A9B;
   font-size: 0.813rem;
   line-height: 1.25rem;
@@ -639,6 +640,10 @@ html.dark .search-result__links-item a {
     grid-template-columns: 150px 1fr;
     align-items: center;
   }
+  .search-result__bio {
+    min-width: 30rem;
+    min-height: 3.125rem;
+  }
   .search-box__input {
     font-size: 1rem;
     line-height: 1.5rem;
@@ -700,6 +705,9 @@ html.dark .search-result__links-item a {
     flex-direction: row;
     align-items: baseline;
     justify-content: space-between;
+  }
+  .search-result__bio {
+    min-width: 470px;
   }
   .search-box__center {
     gap: 0 1rem;

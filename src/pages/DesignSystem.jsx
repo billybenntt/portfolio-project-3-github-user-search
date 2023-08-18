@@ -1,5 +1,4 @@
 import Color from '../components/Color.jsx'
-import SearchBox from '../components/SearchBox.jsx'
 
 function DesignSystem () {
 
@@ -109,15 +108,12 @@ function DesignSystem () {
           <div className="group">
             <div className="interactive-center">
               <div className="search-item">
-                <SearchBox/>
                 <p className="item-description">Light Search Bar - Idle</p>
               </div>
               <div className="search-item">
-                <SearchBox/>
                 <p className="item-description">Light Search Bar - Active Search + Button Hover</p>
               </div>
               <div className="search-item">
-                <SearchBox/>
                 <p className="item-description">Light Search Bar - Error (No Results)</p>
               </div>
             </div>

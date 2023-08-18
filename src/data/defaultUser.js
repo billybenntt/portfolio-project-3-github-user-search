@@ -23,7 +23,7 @@ export default {
     "location": "San Francisco",
     "email": null,
     "hireable": null,
-    "bio": null,
+    "bio": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto eius incidunt ipsam ipsum minus molestias non quas quibusdam quod saepe.",
     "twitter_username": null,
     "public_repos": 8,
     "public_gists": 8,
