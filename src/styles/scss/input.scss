@@ -2,7 +2,6 @@
 @import "utilities";
 @import "normalize";
 @import "layout";
-@import "design-system";
 
 body {
   @include color-scheme($accent-light-200, $accent-dark-300)

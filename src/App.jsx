@@ -1,13 +1,18 @@
-import { useState } from 'react'
-import DesignSystem from './pages/DesignSystem.jsx'
 import Search from './pages/Search.jsx'
+import { ToastContainer } from 'react-toastify'
 
 function App () {
-  const [count, setCount] = useState(1)
 
   return (
     <>
       <Search/>
+      <ToastContainer
+        position="top-center"
+        autoClose={1500}
+        hideProgressBar
+        theme="colored"
+        pauseOnHover={false}
+        pauseOnFocusLoss={false}/>
     </>
   )
 }

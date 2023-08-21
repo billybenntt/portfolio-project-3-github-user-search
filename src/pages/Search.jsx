@@ -1,23 +1,26 @@
 import { CiLocation, CiCompany, CiWebsite, CiTwitter, CiSearch, CiMoon, CiSun } from '../components/icons'
 import { useGlobalContext } from '../hooks/context.jsx'
 import moment from 'moment'
-import { useState } from 'react'
+import { toast } from 'react-toastify'
 
 function Search () {
 
-  const { fetchUserData, user, toggleTheme, theme } = useGlobalContext()
+  const { fetchUserData, user, toggleTheme, theme, resetUser, search, setSearch } = useGlobalContext()
   const {
     name, login, bio, blog, created_at, public_repos,
     company, followers, following, avatar_url, location,
     twitter_username
   } = user
-  const [search, setSearch] = useState('')
 
   const formatDate = moment(created_at).format('MMM Do, YYYY')
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    fetchUserData(search)
+    if (search) {
+      fetchUserData(search)
+    } else {
+      toast.info('Enter username')
+    }
   }
 
   return (
@@ -25,7 +28,7 @@ function Search () {
       <div className="search-center">
         {/*SEARCH HEADER TOGGLE */}
         <div className="search-header">
-          <h3 className="search-header__title">devFinder</h3>
+          <h3 className="search-header__title" onClick={resetUser}>devFinder</h3>
           <div className="search-header__toggle" onClick={toggleTheme}>
             <h3> {theme === 'dark' ? 'light' : 'dark'}</h3>
             <div className="search-header__toggle-icon">
@@ -42,6 +45,7 @@ function Search () {
             </div>
             <input type="text" onChange={(e) => setSearch(e.target.value)}
               placeholder="Search GitHub username…"
+              value={search}
               className="search-box__input"/>
             <button className="search-box__btn" type="submit">
               Search
@@ -69,7 +73,7 @@ function Search () {
             {/* SEARCH BIO */}
             <div className="search-result__bio">
               <p>
-                {bio}
+                {bio ? bio : 'This profile has no bio'}
               </p>
             </div>
             {/* STATS */}
@@ -90,23 +94,31 @@ function Search () {
             {/*LINKS */}
             <div className="search-result__links">
               <div className="search-result__links-group">
-                <div className="search-result__links-item">
+                <div className={location ? 'search-result__links-item' : 'search-result__links-item error'}>
                   <CiLocation/>
-                  <a href="">{location ? location : 'Not Available'}</a>
+                  <a href="">
+                    {location ? location : 'Not Available'}
+                  </a>
                 </div>
-                <div className="search-result__links-item">
+                <div className={company ? 'search-result__links-item' : 'search-result__links-item error'}>
                   <CiCompany/>
-                  <a href="">{company ? company : 'Not Available'}</a>
+                  <a href="">
+                    {company ? company : 'Not Available'}
+                  </a>
                 </div>
               </div>
               <div className="search-result__links-group">
-                <div className="search-result__links-item">
+                <div className={twitter_username ? 'search-result__links-item' : 'search-result__links-item error'}>
                   <CiTwitter/>
-                  <a href="">{twitter_username ? twitter_username : 'Not Available'}</a>
+                  <a href="">
+                    {twitter_username ? twitter_username : 'Not Available'}
+                  </a>
                 </div>
-                <div className="search-result__links-item">
+                <div className={blog ? 'search-result__links-item' : 'search-result__links-item error'}>
                   <CiWebsite/>
-                  <a href="">{blog ? blog : 'Not Available'}</a>
+                  <a href="">
+                    {blog ? blog : 'Not Available'}
+                  </a>
                 </div>
               </div>
             </div>
