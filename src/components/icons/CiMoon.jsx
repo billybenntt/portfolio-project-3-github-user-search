@@ -1,9 +1,9 @@
 import React from 'react'
 
-function CiMoon () {
+function CiMoon() {
   return (
     <div className="custom-icon">
-      <svg xmlns="http://www.w3.org/2000/svg"  height="20" width="20">
+      <svg xmlns="http://www.w3.org/2000/svg" height="20" width="20">
         <path d="M19.513 11.397a.701.701 0 00-.588.128 7.496
           7.496 0 01-2.276 1.336 7.101 7.101 0 01-2.583.462
           7.505 7.505 0 01-5.32-2.209 7.568 7.568 0

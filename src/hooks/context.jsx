@@ -8,7 +8,7 @@ const getLocalStorage = () => {
   return localStorage.getItem('theme') || 'light'
 }
 
-function AppProvider ({ children }) {
+function AppProvider({ children }) {
 
   const [theme, setTheme] = useState(() => getLocalStorage())
   const [isLoading, setIsLoading] = useState(false)

@@ -5,6 +5,8 @@ import { toast } from 'react-toastify'
 
 function Search () {
 
+  console.log(import.meta.env.VITE_SOME_KEY)
+
   const { fetchUserData, user, toggleTheme, theme, resetUser, search, setSearch } = useGlobalContext()
   const {
     name, login, bio, blog, created_at, public_repos,
