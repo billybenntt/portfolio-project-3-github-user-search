@@ -1,4 +1,12 @@
-import { CiLocation, CiCompany, CiWebsite, CiTwitter, CiSearch, CiMoon, CiSun } from '../components/icons'
+import {
+  IconLocation,
+  IconCompany,
+  IconWebsite,
+  IconTwitter,
+  IconSearch,
+  IconMoon,
+  IconSun
+} from '../components/icons'
 import { useGlobalContext } from '../hooks/context.jsx'
 import moment from 'moment'
 import { toast } from 'react-toastify'
@@ -32,7 +40,7 @@ function Search () {
           <div className="search-header__toggle" onClick={toggleTheme}>
             <h3> {theme === 'dark' ? 'light' : 'dark'}</h3>
             <div className="search-header__toggle-icon">
-              {theme === 'dark' ? <CiSun/> : <CiMoon/>}
+              {theme === 'dark' ? <IconSun/> : <IconMoon/>}
             </div>
           </div>
         </div>
@@ -41,7 +49,7 @@ function Search () {
         <form className="search-box" onSubmit={handleSubmit}>
           <div className="search-box__center">
             <div className="search-box__icon">
-              <CiSearch/>
+              <IconSearch/>
             </div>
             <input type="text" onChange={(e) => setSearch(e.target.value)}
               placeholder="Search GitHub username…"
@@ -95,28 +103,28 @@ function Search () {
             <div className="search-result__links">
               <div className="search-result__links-group">
                 <div className={location ? 'search-result__links-item' : 'search-result__links-item error'}>
-                  <CiLocation/>
-                  <a href="">
+                  <IconLocation/>
+                  <a href="#">
                     {location ? location : 'Not Available'}
                   </a>
                 </div>
                 <div className={company ? 'search-result__links-item' : 'search-result__links-item error'}>
-                  <CiCompany/>
-                  <a href="">
+                  <IconCompany/>
+                  <a href="#">
                     {company ? company : 'Not Available'}
                   </a>
                 </div>
               </div>
               <div className="search-result__links-group">
                 <div className={twitter_username ? 'search-result__links-item' : 'search-result__links-item error'}>
-                  <CiTwitter/>
-                  <a href="">
+                  <IconTwitter/>
+                  <a href="#">
                     {twitter_username ? twitter_username : 'Not Available'}
                   </a>
                 </div>
                 <div className={blog ? 'search-result__links-item' : 'search-result__links-item error'}>
-                  <CiWebsite/>
-                  <a href="">
+                  <IconWebsite/>
+                  <a href={blog}>
                     {blog ? blog : 'Not Available'}
                   </a>
                 </div>

@@ -356,7 +356,7 @@ html.dark .custom-icon {
 }
 
 .search {
-  max-width: 327px;
+  max-width: 380px;
 }
 
 .search-header {
@@ -404,13 +404,13 @@ html.dark .search-header__toggle {
 html.dark .search-header__toggle:hover h3 {
   color: #4B6A9B;
 }
-.search-header__toggle:hover .custom-icon {
-  fill: #1E2A47;
+.search-header__toggle:hover .icon {
+  color: #1E2A47;
 }
-html.dark .search-header__toggle:hover .custom-icon {
-  fill: #4B6A9B;
+html.dark .search-header__toggle:hover .icon {
+  color: #4B6A9B;
 }
-.search-header__toggle:hover svg {
+.search-header__toggle:hover .icon {
   transition-property: all;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 800ms;
@@ -512,7 +512,7 @@ html.dark .search-result {
 .search-result__center {
   display: grid;
   grid-template-areas: "a b" "c c" "d d" "e e";
-  gap: 1.2rem 0;
+  gap: 1rem 0;
   padding: 3rem 1.5rem;
 }
 
@@ -576,7 +576,7 @@ html.dark .search-result__stats {
 }
 
 .search-result__stats-item {
-  flex: 1 1;
+  flex: 1 1 0;
 }
 .search-result__stats-item h4 {
   color: #4B6A9B;
@@ -601,37 +601,33 @@ html.dark .search-result__stats-item h4 {
 }
 
 .search-result__links-group {
-  flex: 1 1;
+  flex: 1 1 0;
 }
 
 .search-result__links-item {
-  font-size: 0.813rem;
-  line-height: 1.25rem;
-  font-weight: normal;
   display: flex;
-  align-items: start;
+  font-size: 0.7rem;
+  align-items: center;
   margin-bottom: 1rem;
   gap: 0 1rem;
 }
-.search-result__links-item a {
+.search-result__links-item a, .search-result__links-item .icon {
   color: #4B6A9B;
 }
-html.dark .search-result__links-item a {
+html.dark .search-result__links-item a, html.dark .search-result__links-item .icon {
   color: #FFFFFF;
 }
-.search-result__links-item a:visited {
-  color: #4B6A9B;
+.search-result__links-item a:visited, .search-result__links-item .icon:visited {
+  color: #697C9A;
 }
-.search-result__links-item a:hover {
+.search-result__links-item a:hover, .search-result__links-item .icon:hover {
   cursor: pointer;
   text-decoration: underline;
 }
 
-.search-result__links-item.error a {
+.search-result__links-item.error a, .search-result__links-item.error .icon {
+  cursor: not-allowed;
   color: #808080 !important;
-}
-.search-result__links-item.error svg {
-  fill: #808080;
 }
 
 /* MEDIA QUERIES  */

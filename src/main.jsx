@@ -1,4 +1,3 @@
-import React from 'react'
 import App from './App.jsx'
 import '/src/styles/output.css'
 import 'react-toastify/dist/ReactToastify.css'

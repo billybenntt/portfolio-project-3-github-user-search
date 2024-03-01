@@ -51,8 +51,6 @@ function AppProvider({ children }) {
       }
     } catch (e) {
       setIsError({ msg: 'error', error: true })
-      console.log(isError)
-
     }
     setIsLoading(false)
   }
