@@ -549,7 +549,7 @@ html.dark .search-result {
 
 .search-result__bio {
   grid-area: c;
-  min-height: 2rem;
+  height: 7rem;
   color: #4B6A9B;
   font-size: 0.813rem;
   line-height: 1.25rem;

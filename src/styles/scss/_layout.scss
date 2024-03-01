@@ -163,8 +163,11 @@ body {
   @include color-scheme($accent-light-100, $accent-dark-100);
   width: 100%;
   margin-top: 1rem;
+
   box-shadow: $box-shadow-1;
   border-radius: $rounded-xl;
+
+
 }
 
 
@@ -176,6 +179,7 @@ body {
                        "e e";
   gap: 1rem 0;
   padding: 3rem 1.5rem;
+
 }
 
 
@@ -215,8 +219,7 @@ body {
 
 .search-result__bio {
   grid-area: c;
-  min-height: 2rem;
-
+  height: 7rem;
   @include color-scheme-text($accent-light-100, $primary-200);
   @include text-xs;
   line-height: map-get($line-height, "3");
