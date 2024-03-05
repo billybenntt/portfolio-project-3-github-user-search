@@ -124,7 +124,7 @@ function Search () {
                 </div>
                 <div className={blog ? 'search-result__links-item' : 'search-result__links-item error'}>
                   <IconWebsite/>
-                  <a href={blog} target="_blank">
+                  <a href={blog} target="_blank" rel="noreferrer">
                     {blog ? blog : 'Not Available'}
                   </a>
                 </div>
